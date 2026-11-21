@@ -1,0 +1,76 @@
+{
+  // Terminal → Run Task… (or Ctrl+Shift+P → "Tasks: Run Task")
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Setup: install everything",
+      "detail": "First run only: npm packages + Python venv with backend dependencies",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Setup: frontend packages", "Setup: backend venv"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup: frontend packages",
+      "type": "shell",
+      "command": "npm install",
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup: backend venv",
+      "type": "shell",
+      "command": "if (-not (Test-Path .venv)) { python -m venv .venv }; .venv\\Scripts\\python -m pip install -r requirements.txt",
+      "options": { "cwd": "${workspaceFolder}/backend", "shell": { "executable": "powershell.exe", "args": ["-NoProfile", "-Command"] } },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: demo (frontend only)",
+      "detail": "In-browser synthetic data at http://localhost:5173",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "isBackground": true,
+      "problemMatcher": { "pattern": { "regexp": "^$" }, "background": { "activesBegin": "VITE", "endsPattern": "Local:" } }
+    },
+    {
+      "label": "Run: API",
+      "detail": "FastAPI on http://localhost:8010 (docs at /docs)",
+      "type": "shell",
+      "command": ".venv\\Scripts\\python -m uvicorn app.main:app --port 8010 --reload",
+      "options": { "cwd": "${workspaceFolder}/backend" },
+      "isBackground": true,
+      "problemMatcher": { "pattern": { "regexp": "^$" }, "background": { "activesBegin": "Will watch|Started", "endsPattern": "Application startup complete" } }
+    },
+    {
+      "label": "Run: web (talks to API)",
+      "detail": "Frontend at http://localhost:5174 using the API",
+      "type": "shell",
+      "command": "npm run dev:api",
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "isBackground": true,
+      "problemMatcher": { "pattern": { "regexp": "^$" }, "background": { "activesBegin": "VITE", "endsPattern": "Local:" } }
+    },
+    {
+      "label": "Run: full stack",
+      "detail": "API + web together; open http://localhost:5174",
+      "dependsOn": ["Run: API", "Run: web (talks to API)"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: backend",
+      "type": "shell",
+      "command": ".venv\\Scripts\\python -m pytest -q",
+      "options": { "cwd": "${workspaceFolder}/backend" },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build: frontend",
+      "type": "shell",
+      "command": "npm run build",
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "group": "build",
+      "problemMatcher": ["$tsc"]
+    }
+  ]
+}

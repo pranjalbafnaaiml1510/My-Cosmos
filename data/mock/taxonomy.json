@@ -1,0 +1,185 @@
+{
+  "_note": "Taxonomy structure. Country weights only shape the synthetic demo distribution.",
+  "domains": [
+    {
+      "id": "spacecraft",
+      "name": "Spacecraft & Systems",
+      "icon": "🛰️",
+      "topics": [
+        "Spacecraft Systems Engineering",
+        "Satellite Technology",
+        "Spacecraft Structures",
+        "Thermal Systems",
+        "Spacecraft Power Systems"
+      ]
+    },
+    {
+      "id": "propulsion",
+      "name": "Propulsion",
+      "icon": "🚀",
+      "topics": [
+        "Rocket Propulsion",
+        "Electric Propulsion",
+        "Advanced Propulsion Concepts"
+      ]
+    },
+    {
+      "id": "autonomy",
+      "name": "Autonomy & Robotics",
+      "icon": "🤖",
+      "topics": [
+        "Autonomous Spacecraft",
+        "Spacecraft Navigation",
+        "Guidance and Control",
+        "Space Robotics",
+        "Swarm Robotics"
+      ]
+    },
+    {
+      "id": "missions",
+      "name": "Missions & Exploration",
+      "icon": "🌙",
+      "topics": [
+        "Lunar Exploration",
+        "Mars Exploration",
+        "Asteroid Exploration",
+        "Deep-Space Missions"
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "Space Environment",
+      "icon": "☀️",
+      "topics": [
+        "Space Weather",
+        "Solar Physics",
+        "Radiation Effects"
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI for Space",
+      "icon": "✨",
+      "topics": [
+        "Machine Learning",
+        "Computer Vision",
+        "Fault Detection",
+        "Mission Planning",
+        "Onboard AI"
+      ]
+    },
+    {
+      "id": "comms",
+      "name": "Communications",
+      "icon": "📡",
+      "topics": [
+        "Deep-Space Communication",
+        "Satellite Communication",
+        "Remote Sensing",
+        "Earth Observation"
+      ]
+    },
+    {
+      "id": "human",
+      "name": "Human Spaceflight",
+      "icon": "👩‍🚀",
+      "topics": [
+        "Life-Support Systems",
+        "Space Medicine"
+      ]
+    },
+    {
+      "id": "materials",
+      "name": "Materials & Manufacturing",
+      "icon": "🧪",
+      "topics": [
+        "Space Materials",
+        "In-Space Manufacturing",
+        "Additive Manufacturing"
+      ]
+    },
+    {
+      "id": "astrobio",
+      "name": "Astrobiology",
+      "icon": "🪐",
+      "topics": [
+        "Astrobiology",
+        "Life Detection",
+        "Planetary Atmospheres",
+        "Exoplanets"
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "id": "us",
+      "name": "United States",
+      "flag": "🇺🇸"
+    },
+    {
+      "id": "cn",
+      "name": "China",
+      "flag": "🇨🇳"
+    },
+    {
+      "id": "in",
+      "name": "India",
+      "flag": "🇮🇳"
+    },
+    {
+      "id": "de",
+      "name": "Germany",
+      "flag": "🇩🇪"
+    },
+    {
+      "id": "gb",
+      "name": "United Kingdom",
+      "flag": "🇬🇧"
+    },
+    {
+      "id": "jp",
+      "name": "Japan",
+      "flag": "🇯🇵"
+    },
+    {
+      "id": "fr",
+      "name": "France",
+      "flag": "🇫🇷"
+    },
+    {
+      "id": "it",
+      "name": "Italy",
+      "flag": "🇮🇹"
+    },
+    {
+      "id": "ca",
+      "name": "Canada",
+      "flag": "🇨🇦"
+    },
+    {
+      "id": "au",
+      "name": "Australia",
+      "flag": "🇦🇺"
+    },
+    {
+      "id": "kr",
+      "name": "South Korea",
+      "flag": "🇰🇷"
+    },
+    {
+      "id": "es",
+      "name": "Spain",
+      "flag": "🇪🇸"
+    },
+    {
+      "id": "nl",
+      "name": "Netherlands",
+      "flag": "🇳🇱"
+    },
+    {
+      "id": "br",
+      "name": "Brazil",
+      "flag": "🇧🇷"
+    }
+  ]
+}

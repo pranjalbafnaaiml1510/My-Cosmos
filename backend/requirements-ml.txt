@@ -1,0 +1,4 @@
+# Optional: neural sentence embeddings (pulls in PyTorch, ~1GB+)
+sentence-transformers==3.1.1
+# Optional: FAISS vector index for large corpora
+faiss-cpu==1.8.0

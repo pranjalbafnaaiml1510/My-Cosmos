@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply bg-cream text-navy-900 antialiased; }
+  body { @apply font-sans min-h-screen; }
+  h1, h2, h3 { @apply font-display tracking-tight; }
+  :focus-visible { @apply outline-none ring-2 ring-violet-500 ring-offset-2 ring-offset-cream rounded-md; }
+}
+
+@layer components {
+  .glass { @apply bg-white/60 backdrop-blur-md border border-white/70 shadow-glass rounded-2xl; }
+  .container-cosmos { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.18em] text-violet-500; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

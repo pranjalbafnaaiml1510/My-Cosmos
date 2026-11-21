@@ -1,0 +1,35 @@
+{
+  // Run and Debug panel (Ctrl+Shift+D). Set breakpoints in backend/app/*.py.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug API (FastAPI)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["app.main:app", "--port", "8010"],
+      "cwd": "${workspaceFolder}/backend",
+      "python": "${workspaceFolder}/backend/.venv/Scripts/python.exe",
+      "env": { "DATA_MODE": "mock" },
+      "jinja": true,
+      "justMyCode": true
+    },
+    {
+      "name": "Debug backend tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-q"],
+      "cwd": "${workspaceFolder}/backend",
+      "python": "${workspaceFolder}/backend/.venv/Scripts/python.exe",
+      "justMyCode": true
+    },
+    {
+      "name": "Open web in Edge (debug)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:5174",
+      "webRoot": "${workspaceFolder}/frontend/src"
+    }
+  ]
+}
